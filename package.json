@@ -1,0 +1,19 @@
+{
+  "name": "site_ohmyfood",
+  "version": "1.0.0",
+  "description": "Site Oh My Food : site 100% mobile qui répertorie les menus de restaurants gastronomiques.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:css --style compressed\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LauryF/LaurieBezacier_3_02062021.git"
+  },
+  "author": "Laurie Bezacier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LauryF/LaurieBezacier_3_02062021/issues"
+  },
+  "homepage": "https://github.com/LauryF/LaurieBezacier_3_02062021#readme"
+}
