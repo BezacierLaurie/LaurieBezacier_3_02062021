@@ -17,7 +17,10 @@
         content="Vous souhaitez composer le menu de votre repas pour que vos plats soient prêts lors de votre arrivée ? Finis, les temps d'attente au restaurant grâce au service que propose 'OhMyFood'!">
 
     <!-- Icones -->
+    <!-- Fontawesome v4 -->
     <script src="https://kit.fontawesome.com/463df3f7ea.js" crossorigin="anonymous"></script>
+    <!-- Fontawesome v5 -->
+    <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -61,7 +64,6 @@
             <div class="container_fonctionnement_btn">
                 <!-- Bouton 1-->
                 <div class="element_fonctionnement_btn">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <button>
                         <i class="fa fa-mobile" aria-hidden="true"></i>
                         Choisissez un restaurant
@@ -69,7 +71,6 @@
                 </div>
                 <!-- Bouton 2 -->
                 <div class="element_fonctionnement_btn">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <button>
                         <i class="fa fa-list" aria-hidden="true"></i>
                         Composez votre menu
@@ -77,9 +78,8 @@
                 </div>
                 <!-- Bouton 3 -->
                 <div class="element_fonctionnement_btn">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <button>
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <i class="fas fa-store"></i>
                         Dégustez au restaurant
                     </button>
                 </div>
@@ -110,7 +110,7 @@
                 <!-- Restaurant 2 -->
                 <figure>
                     <a href="Menu_la_note_enchantee.html">
-                        <img src="img/restaurants/Menu_la_note_enchantee.jpg"
+                        <img id="resto_img_spe" src="img/restaurants/Menu_la_note_enchantee.jpg"
                             alt="Photo de présentation du menu 'La note enchantée">
                     </a>
                     <figcaption class="container_descr-photo">
@@ -169,24 +169,32 @@
     </main>
     <footer>
         <div class="container_footer">
-            <div class="element_footer_titre">
+            <div class="logo">
                 <p>ohmyfood</p>
             </div>
-            <div class="element_footer_liens">
-                <a href="#">
-                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                    <p>Proposer un restaurant</p>
-                </a>
-                <a href="#">
-                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
-                    <p>Devenir partenaire</p>
-                </a>
-                <a href="#">
-                    <p>Mentions légales</p>
-                </a>
-                <a href="#">
-                    <p>Contact</p>
-                </a>
+            <div class="element_footer">
+                <div class="footer_liens">
+                    <a href="#">
+                        <i class="fa fa-cutlery" aria-hidden="true"></i>
+                        Proposer un restaurant
+                    </a>
+                </div>
+                <div class="footer_liens">
+                    <a href="#">
+                        <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                        Devenir partenaire
+                    </a>
+                </div>
+                <div class="footer_liens">
+                    <a href="#">
+                        Mentions légales
+                    </a>
+                </div>
+                <div class="footer_liens">
+                    <a href="mailto:ohmyfood@gmail.com">
+                        Contact
+                    </a>
+                </div>
             </div>
         </div>
     </footer>

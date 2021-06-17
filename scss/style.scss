@@ -5,7 +5,10 @@ $corlor_tertiaire: #99E2D0;
 $color_gris1: 	#f6f6f6;
 $color_gris2: #eaeaea;
 $color_gris3: #cfcfcf;
-
+$color_liens: black;
+$color_BG-choix: white;
+$color_liens-footer: white;
+$color_BG-footer: #353535;
 
 
 /* Police */
@@ -19,11 +22,21 @@ $color_gris3: #cfcfcf;
 }
 
 /* HTML */
+
 html
 {
-    max-width: 1200px;
     font-family:'Roboto', sans-serif;
 }
+
+/* Main */
+
+main
+{
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Titres */
 
 h1, h2
 {
@@ -32,15 +45,35 @@ h1, h2
 
 /* Header */
 
+/*
+header
+{
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 3;
+}
+*/
+
 /* Logo */
 #logo
 {
     display: flex;
     justify-content: center;
     font-size: 2em;
+    align-items: center;
+    place-content: space-evenly;
 }
 
-/* Main */
+/* (seulement pour les pages 'Menu') */
+
+.retour-accueil
+{
+    text-decoration: none;
+    color: $color_liens;
+}
+
+/* Page 'Accueil' */
 
 /* Section 'Introduction' */
 
@@ -83,6 +116,15 @@ h1, h2
 .element_infos_btn
 {
     margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.element_infos_btn > button
+{
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px 20px;
+    font-weight: bold;
 }
 
 /* Fonctionnement */
@@ -106,6 +148,7 @@ h1, h2
     border: 1px solid $color_gris1;
     background-color: $color_gris1;
     padding: 10px 40px 10px 20px;
+    margin: 10px;
 }
 
 .element_fonctionnement_btn > button > i
@@ -124,6 +167,7 @@ h1, h2
 {
     font-family:'Roboto', sans-serif;
     padding: 10px 0px 0px 10px;
+    margin-bottom: auto;
 }
 
 .element_restaurants
@@ -133,18 +177,34 @@ h1, h2
     flex-wrap: wrap;
 }
 
-.element_descr-photo_txt > a
-{
-    text-decoration: none;
-    color: black;
-}
-
 .element_restaurants > figure
 {
     padding-bottom: 3px;
     border-radius: 10px 10px 10px 10px;
     box-shadow: -1px 2px 5px 1px #f2f2f2;
-    margin: 20px 0px;
+    margin: 20px;
+    max-width: 500px;
+}
+
+.element_descr-photo_txt > a
+{
+    text-decoration: none;
+    color: $color_liens;
+}
+
+.element_restaurants img
+{
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#resto_img_spe
+{
+    border-radius: 10px 10px 0px 0px;
+    max-height: 333px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .container_descr-photo
@@ -164,19 +224,173 @@ h1, h2
     font-size: 20px;
 }
 
-.element_restaurants img
+/* Pages 'Menu' */
+
+.element_menu_img > figure
 {
-    border-radius: 10px 10px 0px 0px;
-    max-height: 280px;
-    width: 510px;
+    max-width: 1200px;
+    z-index: 1;
+    position: static;
+    margin: auto;
+    height: 450px;
+}
+
+.element_menu_img > figure > img
+{
+    width: 100%;
     object-fit: cover;
+}
+.element_menu_contenu
+{
+    background-color: $color_gris1;
+    border-radius: 45px 45px 0px 0px;
+    padding: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.menu_contenu_titre
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+}
+
+.menu_contenu_titre_icon
+{
+    align-self: center;
+    padding-right: 60px;
+}
+
+.menu_contenu_categories > h3
+{
+    font-weight: 100;
+    width: 50px;
+    border-bottom: 2px solid $corlor_tertiaire;
+    padding-bottom: 5px;
+}
+
+.container_choix
+{
+    border-radius: 10px 10px 10px 10px;
+    background-color: $color_BG-choix;
+    padding: 1px 10px;
+    margin: 10px 0px;
+}
+
+.element_choix_titre
+{
+    font-weight: bold;
+}
+
+.element_choix_description
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.element_choix_prix
+{
+    font-weight: bold;
+}
+
+.element_menu_btn
+{
+    display: flex;
+    justify-content: center;
+}
+
+.element_menu_btn > button
+{
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 /* Footer */
 
-.element_footer_liens > a
+.container_footer
 {
-    text-decoration: none;
-    color: black;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: $color_BG-footer;
 }
 
+.logo
+{
+    font-family:'Shrikhand', sans-serif;
+    font-size: 25px;
+    color: $color_liens-footer;
+}
+
+.element_footer
+{
+    text-align: center;
+}
+
+.footer_liens
+{
+    margin: 10px;
+}
+
+.footer_liens > a
+{
+    text-decoration: none;
+    color: $color_liens-footer;
+}
+
+
+/* Responsive */
+
+/* Sur mobile */
+
+@media screen and (max-width: 320px)
+{
+    /* Page 'Accueil' */
+
+    /* Logo*/
+
+    #logo
+    {
+        font-size: 1em;
+    }
+
+    /* Restaurants */
+
+    #resto_img_spe
+    {
+        max-height: 200px;
+    }
+
+    /* Footer */
+
+    .container_footer
+    {
+        padding-left: 20px;
+        align-items: baseline;
+    }
+
+    .element_footer
+    {
+        text-align: initial;
+    }
+
+    /* Pages 'Menu' */
+
+    .element_menu_img > figure
+    {
+        height: 160px;
+    }
+
+    .menu_contenu_titre
+    {
+        font-size: 1em;
+    }
+
+    .menu_contenu_titre_icon
+    {
+        padding: 0px;
+    }
+}
