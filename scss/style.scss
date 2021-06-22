@@ -1,10 +1,13 @@
 /* Variables */
 $color_primaire: #9356DC;
-$color_secondairey: #FF79DA;
+$color_secondaire: #FF79DA;
 $corlor_tertiaire: #99E2D0;
 $color_gris1: 	#f6f6f6;
 $color_gris2: #eaeaea;
 $color_gris3: #cfcfcf;
+$color_gris4: #7e7e7e;
+$color_number: white;
+$color_TxT-btn: white;
 $color_liens: black;
 $color_BG-choix: white;
 $color_liens-footer: white;
@@ -113,19 +116,49 @@ header
     font-size: 1.2em;
 }
 
-.element_infos_btn
+.element_infos_btn  
 {
     margin: 10px;
     display: flex;
     justify-content: center;
-}
-
-.element_infos_btn > button
-{
-    border-radius: 20px 20px 20px 20px;
-    padding: 10px 20px;
-    font-weight: bold;
-}
+    color: white;
+    button 
+    {
+        box-shadow: 0em 0em 0.7em $color_gris3;
+        border: $color_primaire 0px solid;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 20px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        background-color: $color_primaire;
+        color: $color_TxT-btn;
+        /* Dégradé de la couleur du bouton au survol */
+        &:hover 
+        {
+            &::after 
+            {
+                opacity: 1;
+            }
+        }
+        &::after 
+        {
+            border-radius: 25px;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient($color_secondaire, $color_primaire);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            box-shadow: 0em 0em 0.7em $color_gris4;
+        }
+    }
+  }
 
 /* Fonctionnement */
 
@@ -140,20 +173,52 @@ header
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    counter-reset: step;
+}
+
+.element_fonctionnement_btn::before
+{
+    counter-increment: step 1;
+    content: counter(step);
+    position: absolute;
+    border-radius: 50%;
+    border: $color_primaire 1px solid;
+    width: 17px;
+    height: 17px;
+    font-size: 12px;
+    font-weight: bold;
+    color: $color_number;
+    background-color: $color_primaire;
+    text-align: center;
+    margin-top: 19px;
+    z-index: 1;
+    padding: 3px 2px 0px 0px;
 }
 
 .element_fonctionnement_btn > button
 {
     border-radius: 10px 10px 10px 10px;
-    border: 1px solid $color_gris1;
+    border: 1px solid $color_gris2;
     background-color: $color_gris1;
     padding: 10px 40px 10px 20px;
     margin: 10px;
+    box-shadow: 0em 0em 0.7em $color_gris3;
+}
+
+.element_fonctionnement_btn > button:hover, button:active /* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
+{
+    background-color: rgba($color: $color_primaire, $alpha: 0.2);
+    z-index: 2;
+    i
+    {
+        color: $color_primaire !important;
+    }
 }
 
 .element_fonctionnement_btn > button > i
 {
     margin: 0px 10px 0px 0px;
+    color: $color_gris4;
 }
 
 /* Restaurants */
@@ -223,6 +288,35 @@ header
     margin: 30px;
     font-size: 20px;
 }
+
+.coeur-vide
+{
+    opacity: 1;
+    position: absolute;
+}
+
+.coeur-vide:hover, .coeur-vide:active /* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
+{
+    opacity: 0;
+}
+
+.coeur-plein
+{
+    opacity: 0;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    background: linear-gradient(to bottom left, $color_primaire, 75%, $color_secondaire);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.coeur-plein:hover, .coeur-plein:active /* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
+{
+    opacity: 1;
+    background: linear-gradient(to bottom left, $color_primaire, 75%, $color_secondaire);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}  
 
 /* Pages 'Menu' */
 
@@ -294,19 +388,55 @@ header
     font-weight: bold;
 }
 
-.element_menu_btn
+.element_menu_btn 
 {
     display: flex;
     justify-content: center;
-}
-
-.element_menu_btn > button
-{
-    border-radius: 20px 20px 20px 20px;
-    padding: 10px 20px;
-    font-weight: bold;
-    margin-top: 10px;
-}
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    button 
+    {
+        box-shadow: 0em 0em 0.7em $color_gris3;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: bold;
+        margin-top: 10px;
+        border: $color_primaire 0px solid;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 20px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        background-color: $color_primaire;
+        color: $color_TxT-btn;
+        /* Dégradé de la couleur du bouton au survol */
+        &:hover 
+        {
+            &::after 
+            {
+                opacity: 1;
+            }
+        }
+        &::after 
+        {
+            border-radius: 25px;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient($color_secondaire, $color_primaire);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            box-shadow: 0em 0em 0.7em $color_gris4;
+        }
+    }
+  }
 
 /* Footer */
 
@@ -355,6 +485,13 @@ header
     #logo
     {
         font-size: 1em;
+    }
+
+    /* Fonctionnement */
+
+    .element_fonctionnement_btn::before
+    {
+        left: 35px;
     }
 
     /* Restaurants */
