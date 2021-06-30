@@ -20,13 +20,15 @@
     <!-- Fontawesome v4 -->
     <script src="https://kit.fontawesome.com/463df3f7ea.js" crossorigin="anonymous"></script>
     <!-- Fontawesome v5 -->
-    <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/463df3f7ea.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- loading spinner -->
+    <!--<div class="loader">-->
     <!-- Header -->
     <header>
         <!-- Logo -->
@@ -88,13 +90,20 @@
         <!-- Section 'Restaurants' -->
         <section class="container_restaurants">
             <h2>Restaurants</h2>
-            <!-- Restaurant 1 -->
             <div class="element_restaurants">
+                <!-- Restaurant 1 -->
                 <figure>
+                    <!-- Photo - Restaurant 1 -->
                     <a href="Menu_la_palette_du_gout.html">
-                        <img src="img/restaurants/Menu_la_palette_du_gout.jpg"
-                            alt="Photo de présentation du menu 'La palette du goût">
+                        <div class="restaurants_img">
+                            <div class="indice-photo">
+                                <p>Nouveau</p>
+                            </div>
+                            <img src="img/restaurants/Menu_la_palette_du_gout.jpg"
+                                alt="Photo de présentation du menu 'La palette du goût">
+                        </div>
                     </a>
+                    <!-- Description - Restaurant 1 -->
                     <figcaption class="container_descr-photo">
                         <div class="element_descr-photo_txt">
                             <a href="Menu_la_palette_du_gout.html">
@@ -110,10 +119,17 @@
                 </figure>
                 <!-- Restaurant 2 -->
                 <figure>
+                    <!-- Photo - Restaurant 2 -->
                     <a href="Menu_la_note_enchantee.html">
-                        <img id="resto_img_spe" src="img/restaurants/Menu_la_note_enchantee.jpg"
-                            alt="Photo de présentation du menu 'La note enchantée">
+                        <div class="restaurants_img">
+                            <div class="indice-photo">
+                                <p>Nouveau</p>
+                            </div>
+                            <img id="resto_img_spe" src="img/restaurants/Menu_la_note_enchantee.jpg"
+                                alt="Photo de présentation du menu 'La note enchantée">
+                        </div>
                     </a>
+                    <!-- Description - Restaurant 2 -->
                     <figcaption class="container_descr-photo">
                         <div class="element_descr-photo_txt">
                             <a href="Menu_la_note_enchantee.html">
@@ -127,13 +143,16 @@
                         </div>
                     </figcaption>
                 </figure>
-                </a>
                 <!-- Restaurant 3 -->
                 <figure>
+                    <!-- Photo - Restaurant 3 -->
                     <a href="Menu_a_la_française.html">
-                        <img src="img/restaurants/Menu_a_la_francaise.jpg"
-                            alt="Photo de présentation du menu 'A la française">
+                        <div class="restaurants_img">
+                            <img src="img/restaurants/Menu_a_la_francaise.jpg"
+                                alt="Photo de présentation du menu 'A la française">
+                        </div>
                     </a>
+                    <!-- Description - Restaurant 3 -->
                     <figcaption class="container_descr-photo">
                         <div class="element_descr-photo_txt">
                             <a href="Menu_a_la_française.html">
@@ -147,13 +166,16 @@
                         </div>
                     </figcaption>
                 </figure>
-                </a>
                 <!-- Restaurant 4 -->
                 <figure>
+                    <!-- Photo - Restaurant 4 -->
                     <a href="Menu_le_delice_des_sens.html">
-                        <img src="img/restaurants/Menu_le_delice_des_sens.jpg"
-                            alt="Photo de présentation du menu 'Le délice des sens">
+                        <div class="restaurants_img">
+                            <img src="img/restaurants/Menu_le_delice_des_sens.jpg"
+                                alt="Photo de présentation du menu 'Le délice des sens">
+                        </div>
                     </a>
+                    <!-- Description - Restaurant 4 -->
                     <figcaption class="container_descr-photo">
                         <div class="element_descr-photo_txt">
                             <a href="Menu_le_delice_des_sens.html">
@@ -167,7 +189,6 @@
                         </div>
                     </figcaption>
                 </figure>
-                </a>
             </div>
         </section>
     </main>
@@ -202,6 +223,7 @@
             </div>
         </div>
     </footer>
+    <!--</div>-->
 </body>
 
 </html>
