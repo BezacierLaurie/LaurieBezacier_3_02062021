@@ -301,11 +301,9 @@ main {
     box-shadow: 0em 0em 0.7em $color_gris3;
 }
 
-.element_fonctionnement_btn>button:hover,
-button:active
-
 /* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
-    {
+.element_fonctionnement_btn>button:hover,
+button:active {
     background-color: rgba($color: $color_primaire, $alpha: 0.2);
     z-index: 2;
 
@@ -408,11 +406,9 @@ button:active
     position: absolute;
 }
 
-.fa-stack:hover .coeur-vide,
-.fa-stack:active .coeur-vide
-
 /* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
-    {
+.fa-stack:hover .coeur-vide,
+.fa-stack:active .coeur-vide {
     opacity: 0;
     transition: all 1s ease-in-out;
 }
@@ -426,11 +422,9 @@ button:active
     -webkit-text-fill-color: transparent;
 }
 
-.fa-stack:hover .coeur-plein,
-.fa-stack:active .coeur-plein
-
 /* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
-    {
+.fa-stack:hover .coeur-plein,
+.fa-stack:active .coeur-plein {
     opacity: 1;
     background: linear-gradient(to bottom left, $color_primaire, 75%, $color_secondaire);
     -webkit-background-clip: text;
@@ -481,10 +475,12 @@ button:active
 .container_choix_entrees {
     border-radius: 10px 10px 10px 10px;
     background-color: $color_BG-choix;
-    padding: 1px 10px;
+    padding: 0px 0px 0px 10px;
     margin: 10px 0px;
     animation: visible 3s 1s ease-in-out forwards;
     position: relative;
+    max-height: 85px;
+    display: flex;
 
     @keyframes visible {
         0% {
@@ -500,10 +496,12 @@ button:active
 .container_choix_plats {
     border-radius: 10px 10px 10px 10px;
     background-color: $color_BG-choix;
-    padding: 1px 10px;
+    padding: 0px 0px 0px 10px;
     margin: 10px 0px;
-    animation: visible 3s 2s ease-in-out forwards;
+    animation: visible 3s 1s ease-in-out forwards;
     position: relative;
+    max-height: 85px;
+    display: flex;
 
     @keyframes visible {
         0% {
@@ -519,10 +517,12 @@ button:active
 .container_choix_desserts {
     border-radius: 10px 10px 10px 10px;
     background-color: $color_BG-choix;
-    padding: 1px 10px;
+    padding: 0px 0px 0px 10px;
     margin: 10px 0px;
-    animation: visible 3s 3s ease-in-out forwards;
+    animation: visible 3s 1s ease-in-out forwards;
     position: relative;
+    max-height: 85px;
+    display: flex;
 
     @keyframes visible {
         0% {
@@ -535,12 +535,11 @@ button:active
     }
 }
 
-.element_choix_checkbox {
+.element_choix_checkbox>i {
     opacity: 0;
-    width: 0px;
-    height: 75px;
 }
 
+/* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
 .container_choix_entrees:hover,
 .container_choix_entrees:active,
 .container_choix_plats:hover,
@@ -548,10 +547,7 @@ button:active
 .container_choix_desserts:hover,
 .container_choix_desserts:active {
     .element_choix_checkbox {
-        opacity: 1;
         display: flex;
-        justify-content: flex-end;
-        position: relative;
         border: $corlor_tertiaire 1px solid;
         color: #fff;
         background: $corlor_tertiaire;
@@ -559,37 +555,54 @@ button:active
         border-radius: 0px 10px 10px 0px;
         align-items: center;
         justify-content: center;
-        bottom: 86px;
-        left: 1149px;
-        right: 0px;
-        width: 100px;
-        z-index: 8;
-        transform: translateX(-100px);
-        transition: transform 1s ease-in-out, width 1s ease-in-out;
+        animation: checkbox 1s cubic-bezier(0.01,-0.01, 1, 1.01) backwards;
+        width: 110px;
+        max-height: 85px;
 
+        @keyframes checkbox {
+            0% {
+                width: 0px;
+            }
+
+            100% {
+                z-index: 8;
+                width: 110px;
+            }
+        }
 
         i {
             transform: rotate(360deg);
-            transition: transform 1s ease-in-out;
+            transition: transform 1s cubic-bezier(0.01,-0.01, 1, 1.01);
             font-size: 20px;
+            opacity: 1;
         }
     }
 }
 
 .element_choix_titre {
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .element_choix_description {
+    font-weight: 100;
     display: flex;
     justify-content: space-between;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    margin-top: 15px;
 }
 
 .element_choix_prix {
+    display: flex;
+    justify-content: flex-end;
+    place-items: flex-end;
+    width: 100%;
     font-weight: bold;
+    margin-right: 10px;
 }
 
 .element_menu_btn {
@@ -724,5 +737,9 @@ button:active
 
     .menu_contenu_titre_icon {
         padding: 1px;
+    }
+
+    .element_choix_checkbox {
+        left: 275px;
     }
 }
