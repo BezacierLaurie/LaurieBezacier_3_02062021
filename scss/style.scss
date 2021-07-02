@@ -44,14 +44,13 @@ h2 {
     width: 1886px;
     display: flex;
     justify-content: center;
+    text-align: center;
     background-color: white;
-    animation: visible 3s 5s ease-in-out forwards;
+    animation: progress 3s 5s ease-in-out forwards;
     position: relative;
 
-    @keyframes visible {
-        0% {
-
-        }
+    @keyframes progress {
+        0% {}
 
         100% {
             width: 0px;
@@ -64,7 +63,7 @@ h2 {
 .element_spinner {
     top: 130px;
     color: $color_primaire;
-    font-size: 200px;
+    font-size: 90px;
     text-indent: -9999em;
     width: 1em;
     height: 1em;
@@ -479,52 +478,102 @@ button:active
     padding-bottom: 5px;
 }
 
-.container_choix {
+.container_choix_entrees {
     border-radius: 10px 10px 10px 10px;
     background-color: $color_BG-choix;
     padding: 1px 10px;
     margin: 10px 0px;
+    animation: visible 3s 1s ease-in-out forwards;
+    position: relative;
+
+    @keyframes visible {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
 }
 
-.container_choix:hover {
-    .checkbox_choix {
+.container_choix_plats {
+    border-radius: 10px 10px 10px 10px;
+    background-color: $color_BG-choix;
+    padding: 1px 10px;
+    margin: 10px 0px;
+    animation: visible 3s 2s ease-in-out forwards;
+    position: relative;
+
+    @keyframes visible {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.container_choix_desserts {
+    border-radius: 10px 10px 10px 10px;
+    background-color: $color_BG-choix;
+    padding: 1px 10px;
+    margin: 10px 0px;
+    animation: visible 3s 3s ease-in-out forwards;
+    position: relative;
+
+    @keyframes visible {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.element_choix_checkbox {
+    opacity: 0;
+    width: 0px;
+    height: 75px;
+}
+
+.container_choix_entrees:hover,
+.container_choix_entrees:active,
+.container_choix_plats:hover,
+.container_choix_plats:active,
+.container_choix_desserts:hover,
+.container_choix_desserts:active {
+    .element_choix_checkbox {
         opacity: 1;
         display: flex;
-        height: 50px;
         justify-content: flex-end;
-        width: 50px;
         position: relative;
-        bottom: 70px;
         border: $corlor_tertiaire 1px solid;
         color: #fff;
         background: $corlor_tertiaire;
         text-align: center;
         border-radius: 0px 10px 10px 0px;
         align-items: center;
-        animation: checkbox 3s ease-in-out forwards;
-        left: 1130px;
         justify-content: center;
+        bottom: 86px;
+        left: 1149px;
         right: 0px;
+        width: 100px;
+        z-index: 8;
+        transform: translateX(-100px);
+        transition: transform 1s ease-in-out, width 1s ease-in-out;
 
-        @keyframes checkbox {
-            from {
-                transform: translate(0px) scaleX(0);
-            }
-
-            to {
-                transform: translate(-50px) scaleX(1);
-            }
-        }
 
         i {
             transform: rotate(360deg);
-            transition: transform 3s ease-in-out;
+            transition: transform 1s ease-in-out;
+            font-size: 20px;
         }
     }
-}
-
-.checkbox_choix {
-    opacity: 0;
 }
 
 .element_choix_titre {
@@ -534,6 +583,9 @@ button:active
 .element_choix_description {
     display: flex;
     justify-content: space-between;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .element_choix_prix {
@@ -624,6 +676,13 @@ button:active
 @media screen and (max-width: 320px) {
     /* Page 'Accueil' */
 
+    /* Loading spinner */
+
+    .container_spinner {
+        height: 671px;
+        width: 320px;
+    }
+
     /* Logo*/
 
     #logo {
@@ -664,6 +723,6 @@ button:active
     }
 
     .menu_contenu_titre_icon {
-        padding: 0px;
+        padding: 1px;
     }
 }
