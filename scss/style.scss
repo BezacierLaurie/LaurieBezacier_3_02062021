@@ -39,20 +39,40 @@ h2 {
 
 /* Loading spinner */
 
-.loader {
+.container_spinner {
+    height: 1675px;
+    width: 1886px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    animation: visible 3s 5s ease-in-out forwards;
+    position: relative;
+
+    @keyframes visible {
+        0% {
+
+        }
+
+        100% {
+            width: 0px;
+            height: 0px;
+        }
+    }
+
+}
+
+.element_spinner {
     top: 130px;
     color: $color_primaire;
-    font-size: 90px;
+    font-size: 200px;
     text-indent: -9999em;
-    overflow: hidden;
     width: 1em;
     height: 1em;
     border-radius: 50%;
     margin: 72px auto;
-    position: relative;
+    position: absolute;
     transform: translateZ(0);
     animation: load6 1.7s 3 ease, round 1.7s 3 ease;
-
 
     @-webkit-keyframes load6 {
         0% {
@@ -126,11 +146,14 @@ h2 {
         0% {
             -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+
+
         }
 
         100% {
             -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+
         }
     }
 }
