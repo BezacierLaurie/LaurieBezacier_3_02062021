@@ -1,0 +1,15 @@
+/* Logo */
+#logo {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    align-items: center;
+    place-content: space-evenly;
+}
+
+/* (seulement pour les pages 'Menu') */
+
+.retour-accueil {
+    text-decoration: none;
+    color: $color_liens;
+}

@@ -1,0 +1,11 @@
+.container_recherche {
+    padding: 10px;
+    border-top: 2px solid $color_gris3;
+    background-color: $color_gris2;
+    box-shadow: inset 0em 0.1em $color_gris3;
+}
+
+.element_recherche>input {
+    background-color: $color_gris2;
+    border: 1px solid $color_gris2;
+}

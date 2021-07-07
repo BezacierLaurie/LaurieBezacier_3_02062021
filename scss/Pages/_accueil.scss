@@ -1,0 +1,114 @@
+/* Section 'Introduction' */
+
+.intro {
+    background-color: $color_gris1;
+}
+
+/* Infos */
+
+.container_infos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.element_infos_titre {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Fonctionnement */
+
+.container_fonctionnement>h2 {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+}
+
+.element_fonctionnement_btn>button>i {
+    margin: 0px 10px 0px 0px;
+    color: $color_gris4;
+}
+
+.element_fonctionnement_btn>button:hover,
+button:active>i {
+        color: $color_primaire !important;
+    }
+
+/* Restaurants */
+
+.container_restaurants {
+    background-color: $color_gris1;
+}
+
+.container_restaurants>h2 {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 0px 0px 10px;
+    margin-bottom: auto;
+}
+
+.element_restaurants {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.element_restaurants>figure {
+    padding-bottom: 3px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: -1px 2px 5px 1px #f2f2f2;
+    margin: 10px;
+    max-width: 500px;
+}
+
+.element_descr-photo_txt>a {
+    text-decoration: none;
+    color: $color_liens;
+}
+
+.restaurants_img {
+    position: relative;
+}
+
+.indice-photo {
+    display: flex;
+    justify-content: center;
+    background-color: $corlor_tertiaire;
+    border-radius: 2px;
+    color: $color_TxT-indPho;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 30px;
+    width: 90px;
+    align-items: center;
+}
+
+.element_restaurants img {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    object-fit: cover;
+    max-height: 333.5px;
+}
+
+#resto_img_spe {
+    border-radius: 10px 10px 0px 0px;
+    max-height: 333px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container_descr-photo {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.element_descr-photo_txt {
+    margin-left: 20px;
+}
+
+.element_descr-photo_txt>h3 {
+    margin-bottom: 1px;
+}

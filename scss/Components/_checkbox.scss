@@ -1,0 +1,40 @@
+.element_choix_checkbox>i {
+    opacity: 0;
+}
+
+/* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
+.container_choix_entrees:hover,
+.container_choix_entrees:active,
+.container_choix_plats:hover,
+.container_choix_plats:active,
+.container_choix_desserts:hover,
+.container_choix_desserts:active {
+    .element_choix_checkbox {
+        display: flex;
+        color: #fff;
+        background: $corlor_tertiaire;
+        text-align: center;
+        border-radius: 0px 10px 10px 0px;
+        align-items: center;
+        justify-content: center;
+        animation: checkbox 1s cubic-bezier(0.01, -0.01, 1, 1.01) backwards;
+        width: 90px;
+
+        @keyframes checkbox {
+            0% {
+                width: 0px;
+            }
+
+            100% {
+                width: 90px;
+            }
+        }
+
+        i {
+            transform: rotate(360deg);
+            transition: transform 1s cubic-bezier(0.01, -0.01, 1, 1.01);
+            font-size: 20px;
+            opacity: 1;
+        }
+    }
+}

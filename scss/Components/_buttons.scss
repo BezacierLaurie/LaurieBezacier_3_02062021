@@ -1,0 +1,137 @@
+/* Bouton - Page 'Accueil' / Partie 'Infos' */
+
+.element_infos_btn {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    button {
+        box-shadow: 0em 0em 0.7em $color_gris3;
+        border: $color_primaire 0px solid;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 20px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        background-color: $color_primaire;
+        color: $color_TxT-btn;
+
+        /* Dégradé de la couleur du bouton au survol */
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            border-radius: 25px;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient($color_secondaire, $color_primaire);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            box-shadow: 0em 0em 0.7em $color_gris4;
+        }
+    }
+}
+
+/* Bouton - Page 'Accueil' / Partie 'Fonctionnement' */
+
+.container_fonctionnement_btn {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    counter-reset: step;
+}
+
+.element_fonctionnement_btn::before {
+    counter-increment: step 1;
+    content: counter(step);
+    position: absolute;
+    border-radius: 50%;
+    border: $color_primaire 1px solid;
+    width: 17px;
+    height: 17px;
+    font-size: 12px;
+    font-weight: bold;
+    color: $color_number;
+    background-color: $color_primaire;
+    text-align: center;
+    margin-top: 19px;
+    z-index: 1;
+    padding: 3px 2px 0px 0px;
+}
+
+.element_fonctionnement_btn>button {
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid $color_gris2;
+    background-color: $color_gris1;
+    padding: 10px 40px 10px 20px;
+    margin: 10px;
+    box-shadow: 0em 0em 0.7em $color_gris3;
+    width: 241px;
+}
+
+/* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
+.element_fonctionnement_btn>button:hover,
+button:active {
+    background-color: rgba($color: $color_primaire, $alpha: 0.2);
+    z-index: 2;
+}
+
+/* Bouton - Page 'Menu' */
+
+.menu_btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    button {
+        box-shadow: 0em 0em 0.7em $color_gris3;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: bold;
+        margin-top: 10px;
+        border: $color_primaire 0px solid;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 20px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        background-color: $color_primaire;
+        color: $color_TxT-btn;
+
+        /* Dégradé de la couleur du bouton au survol */
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            border-radius: 25px;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient($color_secondaire, $color_primaire);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            box-shadow: 0em 0em 0.7em $color_gris4;
+        }
+    }
+}

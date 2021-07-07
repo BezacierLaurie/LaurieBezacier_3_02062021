@@ -1,0 +1,129 @@
+/* Partie 'Image' */
+
+.element_menu_img>figure {
+    max-width: 1200px;
+    z-index: 1;
+    position: static;
+    margin: auto;
+    height: 450px;
+}
+
+.element_menu_img>figure>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Partie 'Contenu' */
+
+.element_menu_contenu {
+    background-color: $color_gris1;
+    border-radius: 45px 45px 0px 0px;
+    padding: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.menu_contenu_titre {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+}
+
+.menu_contenu_titre_icon {
+    align-self: center;
+    padding-right: 60px;
+}
+
+.menu_contenu_categories>h3 {
+    font-weight: 100;
+    width: 50px;
+    border-bottom: 2px solid $corlor_tertiaire;
+    padding-bottom: 5px;
+}
+
+/* Partie 'Choix' */
+
+/* Apparitions des menus de manière successive */
+
+.container_choix_entrees {
+    border-radius: 10px 10px 10px 10px;
+    background-color: $color_BG-choix;
+    margin: 10px 0px;
+    animation: visible 3s 1s ease-in-out forwards;
+    position: relative;
+    display: flex;
+    opacity: 0;
+
+    @keyframes visible {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.container_choix_plats {
+    border-radius: 10px 10px 10px 10px;
+    background-color: $color_BG-choix;
+    margin: 10px 0px;
+    animation: visible 3s 2s ease-in-out forwards;
+    position: relative;
+    display: flex;
+    opacity: 0;
+
+    @keyframes visible {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.container_choix_desserts {
+    border-radius: 10px 10px 10px 10px;
+    background-color: $color_BG-choix;
+    margin: 10px 0px;
+    animation: visible 3s 3s ease-in-out forwards;
+    position: relative;
+    display: flex;
+    opacity: 0;
+
+    @keyframes visible {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.element_choix_titre {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+}
+
+.element_choix_description {
+    font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.element_choix_prix {
+    display: flex;
+    justify-content: flex-end;
+    place-items: flex-end;
+    font-weight: bold;
+    margin: 10px;
+}

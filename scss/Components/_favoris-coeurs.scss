@@ -1,0 +1,40 @@
+.element_descr-photo_icon {
+    margin: 30px;
+    font-size: 20px;
+}
+
+.coeur-vide {
+    opacity: 1;
+    position: absolute;
+}
+
+/* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
+.fa-stack:hover .coeur-vide,
+.fa-stack:active .coeur-vide {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.coeur-plein {
+    opacity: 0;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    background: linear-gradient(to bottom left, $color_primaire, 75%, $color_secondaire);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
+.fa-stack:hover .coeur-plein,
+.fa-stack:active .coeur-plein {
+    opacity: 1;
+    background: linear-gradient(to bottom left, $color_primaire, 75%, $color_secondaire);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+

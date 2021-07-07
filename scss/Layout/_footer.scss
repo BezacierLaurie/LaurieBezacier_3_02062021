@@ -1,0 +1,25 @@
+.container_footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: $color_BG-footer;
+}
+
+.logo {
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 25px;
+    color: $color_liens-footer;
+}
+
+.element_footer {
+    text-align: center;
+}
+
+.footer_liens {
+    margin: 10px;
+}
+
+.footer_liens>a {
+    text-decoration: none;
+    color: $color_liens-footer;
+}
