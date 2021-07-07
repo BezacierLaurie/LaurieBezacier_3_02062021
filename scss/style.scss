@@ -475,12 +475,11 @@ button:active {
 .container_choix_entrees {
     border-radius: 10px 10px 10px 10px;
     background-color: $color_BG-choix;
-    padding: 0px 0px 0px 10px;
     margin: 10px 0px;
     animation: visible 3s 1s ease-in-out forwards;
     position: relative;
-    max-height: 85px;
     display: flex;
+    opacity: 0;
 
     @keyframes visible {
         0% {
@@ -496,12 +495,11 @@ button:active {
 .container_choix_plats {
     border-radius: 10px 10px 10px 10px;
     background-color: $color_BG-choix;
-    padding: 0px 0px 0px 10px;
     margin: 10px 0px;
-    animation: visible 3s 1s ease-in-out forwards;
+    animation: visible 3s 2s ease-in-out forwards;
     position: relative;
-    max-height: 85px;
     display: flex;
+    opacity: 0;
 
     @keyframes visible {
         0% {
@@ -517,12 +515,11 @@ button:active {
 .container_choix_desserts {
     border-radius: 10px 10px 10px 10px;
     background-color: $color_BG-choix;
-    padding: 0px 0px 0px 10px;
     margin: 10px 0px;
-    animation: visible 3s 1s ease-in-out forwards;
+    animation: visible 3s 3s ease-in-out forwards;
     position: relative;
-    max-height: 85px;
     display: flex;
+    opacity: 0;
 
     @keyframes visible {
         0% {
@@ -555,9 +552,8 @@ button:active {
         border-radius: 0px 10px 10px 0px;
         align-items: center;
         justify-content: center;
-        animation: checkbox 1s cubic-bezier(0.01,-0.01, 1, 1.01) backwards;
-        width: 110px;
-        max-height: 85px;
+        animation: checkbox 1s cubic-bezier(0.01, -0.01, 1, 1.01) backwards;
+        width: 90px;
 
         @keyframes checkbox {
             0% {
@@ -565,14 +561,13 @@ button:active {
             }
 
             100% {
-                z-index: 8;
-                width: 110px;
+                width: 90px;
             }
         }
 
         i {
             transform: rotate(360deg);
-            transition: transform 1s cubic-bezier(0.01,-0.01, 1, 1.01);
+            transition: transform 1s cubic-bezier(0.01, -0.01, 1, 1.01);
             font-size: 20px;
             opacity: 1;
         }
@@ -584,15 +579,13 @@ button:active {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 0px 0px 0px 10px;
 }
 
 .element_choix_description {
     font-weight: 100;
     display: flex;
     justify-content: space-between;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     margin-top: 15px;
 }
 
@@ -600,9 +593,8 @@ button:active {
     display: flex;
     justify-content: flex-end;
     place-items: flex-end;
-    width: 100%;
     font-weight: bold;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .element_menu_btn {
@@ -684,19 +676,44 @@ button:active {
 
 /* Responsive */
 
-/* Sur mobile */
+/* Sur tablette */
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
+
+    /* Page 'Accueil' */
+
+    /* Loading spinner */ 
+
+    .container_spinner {
+        height: 1000px;
+        width: 768px;
+    }
+
+    .element_spinner {
+        top: 200px;
+        left: 305px;
+    }
+}
+
+/* Sur mobiles */
+
+@media screen and (max-width: 425px) {
+
     /* Page 'Accueil' */
 
     /* Loading spinner */
 
     .container_spinner {
-        height: 671px;
-        width: 320px;
+        height: 700px;
+        width: 425px;
     }
 
-    /* Logo*/
+    .element_spinner {
+        left: 100px;
+        top: 150px;
+    }
+
+    /* Logo */
 
     #logo {
         font-size: 1em;
@@ -706,6 +723,10 @@ button:active {
 
     .element_fonctionnement_btn::before {
         left: 35px;
+    }
+
+    .element_fonctionnement_btn>button>i {
+        margin: 0px 10px 0px 10px;
     }
 
     /* Restaurants */
@@ -739,7 +760,20 @@ button:active {
         padding: 1px;
     }
 
-    .element_choix_checkbox {
-        left: 275px;
+    .menu_contenu_categories {
+        font-size: 12px;
     }
+
+    .element_choix_description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline;
+        max-width: 210px;
+    }
+
+    .element_choix_checkbox>i {
+        font-size: 17px !important;
+    }
+
 }
