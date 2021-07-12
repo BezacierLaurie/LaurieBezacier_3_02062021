@@ -179,13 +179,18 @@
         overflow: hidden;
         text-overflow: ellipsis;
         display: inline;
-        max-width: 210px;
+        max-width: 200px;
+    }
+
+    .element_choix_prix
+    {
+        margin: 10px 5px;
+        margin-inline-start: auto;
     }
 
     .element_choix_checkbox>i {
         font-size: 17px !important;
     }
-
 }
 
 @media screen and (max-width: 320px) {
