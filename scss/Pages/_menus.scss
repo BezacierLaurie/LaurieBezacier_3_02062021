@@ -43,66 +43,13 @@
 
 /* Partie 'Choix' */
 
-/* Apparitions des menus de manière successive */
-
-.container_choix_entrees {
+.container_choix {
     border-radius: 10px 10px 10px 10px;
     background-color: $color_BG-choix;
     margin: 10px 0px;
-    animation: visible 3s 1s ease-in-out forwards;
     position: relative;
     display: flex;
     opacity: 0;
-
-    @keyframes visible {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-}
-
-.container_choix_plats {
-    border-radius: 10px 10px 10px 10px;
-    background-color: $color_BG-choix;
-    margin: 10px 0px;
-    animation: visible 3s 2s ease-in-out forwards;
-    position: relative;
-    display: flex;
-    opacity: 0;
-
-    @keyframes visible {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-}
-
-.container_choix_desserts {
-    border-radius: 10px 10px 10px 10px;
-    background-color: $color_BG-choix;
-    margin: 10px 0px;
-    animation: visible 3s 3s ease-in-out forwards;
-    position: relative;
-    display: flex;
-    opacity: 0;
-
-    @keyframes visible {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
 }
 
 .element_choix_titre {

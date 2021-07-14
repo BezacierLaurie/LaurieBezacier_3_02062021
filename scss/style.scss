@@ -51,6 +51,7 @@
 /* Fonctionnement - Btn */
 @import"./Components/buttons";
 
+
 /* Restaurants */
 @import"./Pages/accueil";
 
@@ -61,15 +62,19 @@
 
 /* Pages 'Menu' */
 
-/* Contenu des pages menus */
+/* Menus - Parties 'Image' et 'Contenu' */
 @import"./Pages/menus";
 
 
-/* Check box */
+/* Menus - Apparition des menus de manière successive */
+@import"./Components/app-menus";
+
+
+/* Menus - Check box */
 @import"./Components/checkbox";
 
 
-/* Contenu des pages menus (suite) */
+/* Menus - Partie 'Contenu' (suite) */
 @import"./Pages/menus";
 
 

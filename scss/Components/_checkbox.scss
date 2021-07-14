@@ -3,12 +3,8 @@
 }
 
 /* HOVER pour le mode 'PC' et ACTIVE pour le mode 'mobile' */
-.container_choix_entrees:hover,
-.container_choix_entrees:active,
-.container_choix_plats:hover,
-.container_choix_plats:active,
-.container_choix_desserts:hover,
-.container_choix_desserts:active {
+.container_choix:hover,
+.container_choix:active {
     .element_choix_checkbox {
         display: flex;
         color: #fff;
