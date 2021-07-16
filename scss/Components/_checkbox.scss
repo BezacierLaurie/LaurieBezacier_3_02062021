@@ -14,7 +14,7 @@
         align-items: center;
         justify-content: center;
         animation: checkbox 1s cubic-bezier(0.01, -0.01, 1, 1.01) backwards;
-        width: 90px;
+        width: 60px;
 
         @keyframes checkbox {
             0% {
@@ -22,7 +22,7 @@
             }
 
             100% {
-                width: 90px;
+                width: 60px;
             }
         }
 

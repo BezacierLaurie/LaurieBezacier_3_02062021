@@ -49,22 +49,22 @@
     margin: 10px 0px;
     position: relative;
     display: flex;
-    opacity: 0;
 }
 
-.element_choix_titre {
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
+.element_choix
+{
+    margin: 10px;
     width: 100%;
-    padding: 0px 0px 0px 10px;
 }
 
-.element_choix_description {
+.choix_titre {
+    font-weight: bold;
+    display: inline;
+}
+
+.choix_description {
     font-weight: 100;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
+    display: inline;
 }
 
 .element_choix_prix {
