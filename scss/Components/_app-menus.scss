@@ -1,5 +1,5 @@
 .entrees {
-    animation: visible 3s 1s ease-in-out forwards;
+    animation: visible 3s 1s ease-in-out both;
 
     @keyframes visible {
         0% {
@@ -14,7 +14,7 @@
 }
 
 .plats {
-    animation: visible 3s 2s ease-in-out forwards;
+    animation: visible 3s 2s ease-in-out both;
 
     @keyframes visible {
         0% {
@@ -29,7 +29,7 @@
 }
 
 .desserts {
-    animation: visible 3s 3s ease-in-out forwards;
+    animation: visible 3s 3s ease-in-out both;
 
     @keyframes visible {
         0% {

@@ -13,7 +13,7 @@
         border-radius: 0px 10px 10px 0px;
         align-items: center;
         justify-content: center;
-        animation: checkbox 1s cubic-bezier(0.01, -0.01, 1, 1.01) backwards;
+        animation: checkbox 0.3s cubic-bezier(0.01, -0.01, 1, 1.01) backwards;
         width: 60px;
 
         @keyframes checkbox {
@@ -28,7 +28,7 @@
 
         i {
             transform: rotate(360deg);
-            transition: transform 1s cubic-bezier(0.01, -0.01, 1, 1.01);
+            transition: transform 0.5s cubic-bezier(0.01, -0.01, 1, 1.01);
             font-size: 20px;
             opacity: 1;
         }
