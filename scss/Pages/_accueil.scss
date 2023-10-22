@@ -31,8 +31,8 @@
 
 .element_fonctionnement_btn>button:hover,
 button:active>i {
-        color: $color_primaire !important;
-    }
+    color: $color_primaire !important;
+}
 
 /* Restaurants */
 
@@ -72,7 +72,7 @@ button:active>i {
 .indice-photo {
     display: flex;
     justify-content: center;
-    background-color: $corlor_tertiaire;
+    background-color: $color_tertiaire;
     border-radius: 2px;
     color: $color_TxT-indPho;
     font-weight: bold;
