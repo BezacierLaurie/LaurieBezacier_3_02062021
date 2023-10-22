@@ -37,7 +37,7 @@
 .menu_contenu_categories>h3 {
     font-weight: 100;
     width: 50px;
-    border-bottom: 2px solid $corlor_tertiaire;
+    border-bottom: 2px solid $color_tertiaire;
     padding-bottom: 5px;
 }
 
@@ -51,8 +51,7 @@
     display: flex;
 }
 
-.element_choix
-{
+.element_choix {
     margin: 10px;
     width: 100%;
 }
